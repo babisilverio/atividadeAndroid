@@ -1,9 +1,15 @@
 package com.memory.jogodememoria;
 
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,12 +20,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickBotao(View view){
-        //int botaoClicado = view.getId();
-        //Button clicado = (Button) findViewById(botaoClicado);
+        List<Integer> numeros = gerarNumeros();
 
-        View tela = findViewById(R.id.fundo_tela);
-        tela.setBackground(view.getBackground());
-        view.setVisibility(View.INVISIBLE);
+
+            View tela = findViewById(R.id.fundo_tela);
+            tela.setBackground(view.getBackground());
+            view.setVisibility(View.INVISIBLE);
+
     }
 
     public void reiniciar(View view) {
@@ -43,7 +50,19 @@ public class MainActivity extends AppCompatActivity {
         show6.setVisibility(View.VISIBLE);
 
         View tela = findViewById(R.id.fundo_tela);
-        tela.setBackground(tela.getBackground());
+        tela.setBackgroundColor(Color.WHITE);
 
     }
+
+    public List<Integer> gerarNumeros(){
+        List<Integer> numeros = new ArrayList<>();
+
+        for(int i = 1; i <=6; i++)
+            numeros.add(i);
+
+        Collections.shuffle(numeros);
+
+        return numeros;
+    }
+
 }

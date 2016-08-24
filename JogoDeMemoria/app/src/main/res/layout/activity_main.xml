@@ -3,12 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:padding="10dp"
     android:id="@+id/fundo_tela"
-    android:background="#ffffff"
+    android:background="@drawable/tela_branca"
     tools:context="com.memory.jogodememoria.MainActivity"
     >
 
@@ -19,18 +16,18 @@
         android:id="@+id/buttonR"
         android:elegantTextHeight="false"
         android:typeface="normal"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:allowUndo="false"
-        android:background="@android:color/darker_gray"
-        android:onClick="reiniciar" />
+        android:background="@drawable/botao_reinicia"
+        android:onClick="reiniciar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/botao1"
         android:id="@+id/button1"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@drawable/botao1"
         android:padding="35dp"
         android:layout_marginBottom="28dp"
         android:layout_above="@+id/button3"
@@ -43,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="@string/botao2"
         android:id="@+id/button2"
-        android:background="@android:color/holo_red_dark"
+        android:background="@drawable/botao2"
         android:padding="35dp"
         android:onClick="clickBotao"
         android:layout_alignTop="@+id/button1"
@@ -55,7 +52,7 @@
         android:layout_height="wrap_content"
         android:text="@string/botao3"
         android:id="@+id/button3"
-        android:background="#097703"
+        android:background="@drawable/botao3"
         android:padding="35dp"
         android:onClick="clickBotao"
         android:layout_centerVertical="true"
@@ -70,7 +67,7 @@
         android:layout_alignTop="@+id/button3"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2"
-        android:background="#eccb22"
+        android:background="@drawable/botao4"
         android:padding="35dp"
         android:onClick="clickBotao"/>
 
@@ -79,7 +76,7 @@
         android:layout_height="wrap_content"
         android:text="@string/botao5"
         android:id="@+id/button5"
-        android:background="#b0b1ae"
+        android:background="@drawable/botao5"
         android:padding="35dp"
         android:layout_below="@+id/button3"
         android:layout_alignLeft="@+id/button3"
@@ -95,7 +92,7 @@
         android:layout_alignTop="@+id/button5"
         android:layout_toRightOf="@+id/buttonR"
         android:layout_toEndOf="@+id/buttonR"
-        android:background="#928155"
+        android:background="@drawable/botao6"
         android:padding="35dp"
         android:onClick="clickBotao"/>
 
@@ -108,6 +105,15 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:id="@+id/barrinha"
+        android:visibility="visible" />
 
 
 </RelativeLayout>
