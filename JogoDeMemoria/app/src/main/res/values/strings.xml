@@ -8,4 +8,6 @@
     <string name="botao6">6</string>
     <string name="reiniciar">Reiniciar</string>
     <string name="progresso">Progresso:</string>
+    <string name="vitoria">Parabéns!!!</string>
+    <string name="elogio">Você tem uma boa memória</string>
 </resources>
